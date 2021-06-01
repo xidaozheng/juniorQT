@@ -12,7 +12,7 @@ ButtonSlot::ButtonSlot(QWidget *parent)
 
     btn->setParent(this);
 
-    btn->setText("OK");
+    btn->setText("Close");
     btn->move(260, 180);
 
     connect(btn, &QPushButton::clicked, this, &ButtonSlot::close);
