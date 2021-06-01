@@ -22,67 +22,44 @@ MainWindow::MainWindow(QWidget *parent) :
         QMenu *fileMenu = bar->addMenu("File");
         fileMenu->addAction("New");
         fileMenu->addAction("Open");
-        fileMenu->addAction("Recent file");
         fileMenu->addSeparator();
-        fileMenu->addAction("save");
+        fileMenu->addAction("Save");
 
-
-        QMenu *EditMenu = bar->addMenu("Edit");
-        EditMenu->addAction("undo");
-        EditMenu->addAction("redo");
-        fileMenu->addSeparator();
-        EditMenu->addAction("cut");
-        EditMenu->addAction("copy");
-        EditMenu->addAction("paste");
-
-
-        QMenu *BuildMenu = bar->addMenu("Build");
-        BuildMenu->addAction("build all project");
-        BuildMenu->addAction("build current project");
-        BuildMenu->addAction("qmake");
-        fileMenu->addSeparator();
-        BuildMenu->addAction("Run");
-
-        QMenu *DebugMenu = bar->addMenu("Help");
-        DebugMenu->addAction("directory");
-        DebugMenu->addAction("index");
-        fileMenu->addSeparator();
-        DebugMenu->addAction("F1");
-        DebugMenu->addAction("about QT Creator");
+        QMenu *editMenu = bar->addMenu("Edit");
+        editMenu->addAction("undo");
+        editMenu->addAction("redo");
+        editMenu->addAction("Find");
     }
 
 /***********************************************/
 /*****************==ToolBar==*******************/
 /***********************************************/
     {
-        QToolBar *toolBar = new QToolBar(this);
-        addToolBar(Qt::LeftToolBarArea,toolBar);
+        QToolBar *bar = new QToolBar;
+        addToolBar(Qt::LeftToolBarArea, bar);
 
-        toolBar->setFloatable(false);
-        toolBar->setMovable(false);
+        bar->addAction("Welcome");
+        bar->addAction("Edit");
+        bar->addAction("Design");
+        bar->addSeparator();
+        bar->addAction("Debug");
 
-        toolBar->addAction("Welcome");
-        toolBar->addAction("Edit");
-        toolBar->addAction("Design");
-        toolBar->addAction("Debug");
-        toolBar->addAction("Project");
-        toolBar->addAction("Help");
+        bar->setFloatable(false);
+        bar->setMovable(false);
     }
 
 /***********************************************/
 /*****************==StatusBar==*****************/
 /***********************************************/
     {
-        QStatusBar *stBar = statusBar();
-        setStatusBar(stBar);
+        QStatusBar *bar = statusBar();
+        setStatusBar(bar);
 
-        //place lable
-        QLabel *lable = new QLabel("left", this);
-        stBar->addWidget(lable);
+        QLabel *lab1 = new QLabel("Right", this);
+        bar->addWidget(lab1);
 
-        //place lable
-        QLabel *lable2 = new QLabel("right", this);
-        stBar->addPermanentWidget(lable2);
+        QLabel *lab2 = new QLabel("Left", this);
+        bar->addPermanentWidget(lab2);
     }
 
 
@@ -90,9 +67,9 @@ MainWindow::MainWindow(QWidget *parent) :
 /*****************==DockBar==*******************/
 /***********************************************/
     {
-        QDockWidget *dwBar = new QDockWidget("float", this);
-        addDockWidget(Qt::TopDockWidgetArea, dwBar);
-        dwBar->setAllowedAreas(Qt::TopDockWidgetArea);
+        QDockWidget *dock = new QDockWidget("Dock", this);
+        addDockWidget(Qt::TopDockWidgetArea, dock);
+        dock->setAllowedAreas(Qt::TopDockWidgetArea);
 
         QTextEdit *edit = new QTextEdit(this);
         setCentralWidget(edit);
