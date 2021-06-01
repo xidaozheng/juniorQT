@@ -4,6 +4,7 @@
 #include <QStatusBar>
 #include <QLabel>
 #include <QDockWidget>
+#include <QTextEdit>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -90,7 +91,11 @@ MainWindow::MainWindow(QWidget *parent) :
 /***********************************************/
     {
         QDockWidget *dwBar = new QDockWidget("float", this);
-        addDockWidget(dwBar);
+        addDockWidget(Qt::TopDockWidgetArea, dwBar);
+        dwBar->setAllowedAreas(Qt::TopDockWidgetArea);
+
+        QTextEdit *edit = new QTextEdit(this);
+        setCentralWidget(edit);
     }
 }
 
