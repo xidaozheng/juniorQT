@@ -55,9 +55,6 @@ MainWindow::MainWindow(QWidget *parent) :
     toolBar->addAction("Debug");
     toolBar->addAction("Project");
     toolBar->addAction("Help");
-
-
- //   ui->setupUi(this);
 }
 
 MainWindow::~MainWindow()
