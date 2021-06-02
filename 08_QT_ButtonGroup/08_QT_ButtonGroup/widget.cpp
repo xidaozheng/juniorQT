@@ -4,6 +4,7 @@
 #include <QListWidgetItem>
 #include <QTreeWidgetItem>
 #include <QTableWidget>
+#include <QMovie>
 
 
 Widget::Widget(QWidget *parent) :
@@ -91,6 +92,18 @@ Widget::Widget(QWidget *parent) :
             ui->tableWidget->setItem(i, col++, new QTableWidgetItem(list[1][i]));
             ui->tableWidget->setItem(i, col++, new QTableWidgetItem(list[2][i]));
         }
+    }
+
+    {
+        ui->label_pic->setPixmap(QPixmap(":/sikao.jpg"));
+        ui->label_pic->setScaledContents(true); //自适应
+    }
+
+    {
+        QMovie *movie = new QMovie(":/movie.gif");
+        ui->label_movie->setMovie(movie);
+        ui->label_movie->setScaledContents(true);   //自适应
+        movie->start();
     }
 }
 

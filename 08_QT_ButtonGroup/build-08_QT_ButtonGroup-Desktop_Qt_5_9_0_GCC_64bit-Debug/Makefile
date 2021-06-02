@@ -669,6 +669,8 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_res.cpp
 qrc_res.cpp: ../08_QT_ButtonGroup/res.qrc \
 		/opt/Qt5.9.0/5.9/gcc_64/bin/rcc \
+		../08_QT_ButtonGroup/sikao.jpg \
+		../08_QT_ButtonGroup/movie.gif \
 		../08_QT_ButtonGroup/QTIcon.jpeg
 	/opt/Qt5.9.0/5.9/gcc_64/bin/rcc -name res ../08_QT_ButtonGroup/res.qrc -o qrc_res.cpp
 
@@ -1031,11 +1033,16 @@ widget.o: ../08_QT_ButtonGroup/widget.cpp ../08_QT_ButtonGroup/widget.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtGui/qinputmethod.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QButtonGroup \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qbuttongroup.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QGroupBox \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qgroupbox.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qframe.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -1048,7 +1055,40 @@ widget.o: ../08_QT_ButtonGroup/widget.cpp ../08_QT_ButtonGroup/widget.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qstyle.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtabbar.h \
 		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtabwidget.h \
-		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qrubberband.h
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QListWidget \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qlistwidget.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qlistview.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QRadioButton \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qradiobutton.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QTableWidget \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtablewidget.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtableview.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QToolButton \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtoolbutton.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QTreeWidget \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtreewidget.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtreeview.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qtreewidgetitemiterator.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/QDebug \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QListWidgetItem \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtWidgets/QTreeWidgetItem \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtGui/QMovie \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtGui/qmovie.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtGui/qimagereader.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtGui/qimageiohandler.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qplugin.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qpointer.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qjsonobject.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qjsonvalue.h \
+		/opt/Qt5.9.0/5.9/gcc_64/include/QtCore/qfactoryinterface.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o widget.o ../08_QT_ButtonGroup/widget.cpp
 
 qrc_res.o: qrc_res.cpp 

@@ -16,6 +16,7 @@
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QTableWidget>
@@ -47,6 +48,8 @@ public:
     QListWidget *listWidget;
     QTreeWidget *treeWidget;
     QTableWidget *tableWidget;
+    QLabel *label_pic;
+    QLabel *label_movie;
 
     void setupUi(QWidget *Widget)
     {
@@ -131,10 +134,17 @@ public:
         __qtreewidgetitem->setText(0, QStringLiteral("1"));
         treeWidget->setHeaderItem(__qtreewidgetitem);
         treeWidget->setObjectName(QStringLiteral("treeWidget"));
-        treeWidget->setGeometry(QRect(170, 330, 501, 192));
+        treeWidget->setGeometry(QRect(10, 430, 501, 192));
         tableWidget = new QTableWidget(Widget);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(510, 30, 361, 251));
+        tableWidget->setGeometry(QRect(540, 370, 361, 251));
+        label_pic = new QLabel(Widget);
+        label_pic->setObjectName(QStringLiteral("label_pic"));
+        label_pic->setGeometry(QRect(620, 20, 231, 221));
+        label_pic->setScaledContents(false);
+        label_movie = new QLabel(Widget);
+        label_movie->setObjectName(QStringLiteral("label_movie"));
+        label_movie->setGeometry(QRect(170, 210, 341, 211));
 
         retranslateUi(Widget);
 
@@ -156,6 +166,8 @@ public:
         checkBox_better->setText(QApplication::translate("Widget", "\346\273\241\346\204\217", Q_NULLPTR));
         checkBox_bad->setText(QApplication::translate("Widget", "\345\267\256", Q_NULLPTR));
         checkBox_verybad->setText(QApplication::translate("Widget", "\351\235\236\345\270\270\345\267\256", Q_NULLPTR));
+        label_pic->setText(QString());
+        label_movie->setText(QApplication::translate("Widget", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
 };

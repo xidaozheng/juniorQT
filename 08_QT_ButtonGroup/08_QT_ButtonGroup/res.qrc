@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>QTIcon.jpeg</file>
+        <file>movie.gif</file>
+        <file>sikao.jpg</file>
     </qresource>
 </RCC>
