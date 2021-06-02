@@ -19,6 +19,7 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QToolButton>
+#include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,94 +29,107 @@ class Ui_Widget
 {
 public:
     QToolButton *toolButton;
-    QGroupBox *groupBox_sex;
-    QVBoxLayout *verticalLayout;
-    QRadioButton *radioButton_mam;
-    QRadioButton *radioButton_women;
-    QGroupBox *groupBox_Bool;
-    QVBoxLayout *verticalLayout_2;
-    QRadioButton *radioButton_OK;
-    QRadioButton *radioButton_Cls;
     QGroupBox *groupBox;
+    QVBoxLayout *verticalLayout;
+    QRadioButton *radioButton_man;
+    QRadioButton *radioButton_women;
+    QGroupBox *groupBox_2;
+    QVBoxLayout *verticalLayout_2;
+    QRadioButton *radioButton_marry;
+    QRadioButton *radioButton_single;
+    QGroupBox *groupBox_3;
     QVBoxLayout *verticalLayout_3;
     QCheckBox *checkBox_best;
     QCheckBox *checkBox_better;
-    QCheckBox *checkBox_good;
+    QCheckBox *checkBox_bad;
+    QCheckBox *checkBox_verybad;
     QListWidget *listWidget;
+    QTreeWidget *treeWidget;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(746, 494);
+        Widget->resize(930, 627);
         toolButton = new QToolButton(Widget);
         toolButton->setObjectName(QStringLiteral("toolButton"));
-        toolButton->setGeometry(QRect(30, 30, 61, 51));
+        toolButton->setGeometry(QRect(48, 30, 48, 48));
         QIcon icon;
         icon.addFile(QStringLiteral(":/QTIcon.jpeg"), QSize(), QIcon::Normal, QIcon::Off);
         toolButton->setIcon(icon);
-        toolButton->setIconSize(QSize(64, 64));
+        toolButton->setIconSize(QSize(48, 48));
         toolButton->setAutoRaise(true);
-        groupBox_sex = new QGroupBox(Widget);
-        groupBox_sex->setObjectName(QStringLiteral("groupBox_sex"));
-        groupBox_sex->setGeometry(QRect(20, 130, 99, 96));
-        verticalLayout = new QVBoxLayout(groupBox_sex);
+        groupBox = new QGroupBox(Widget);
+        groupBox->setObjectName(QStringLiteral("groupBox"));
+        groupBox->setGeometry(QRect(20, 100, 64, 108));
+        verticalLayout = new QVBoxLayout(groupBox);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        radioButton_mam = new QRadioButton(groupBox_sex);
-        radioButton_mam->setObjectName(QStringLiteral("radioButton_mam"));
+        radioButton_man = new QRadioButton(groupBox);
+        radioButton_man->setObjectName(QStringLiteral("radioButton_man"));
 
-        verticalLayout->addWidget(radioButton_mam);
+        verticalLayout->addWidget(radioButton_man);
 
-        radioButton_women = new QRadioButton(groupBox_sex);
+        radioButton_women = new QRadioButton(groupBox);
         radioButton_women->setObjectName(QStringLiteral("radioButton_women"));
 
         verticalLayout->addWidget(radioButton_women);
 
-        groupBox_Bool = new QGroupBox(Widget);
-        groupBox_Bool->setObjectName(QStringLiteral("groupBox_Bool"));
-        groupBox_Bool->setGeometry(QRect(130, 130, 87, 96));
-        verticalLayout_2 = new QVBoxLayout(groupBox_Bool);
+        groupBox_2 = new QGroupBox(Widget);
+        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+        groupBox_2->setGeometry(QRect(110, 100, 79, 108));
+        verticalLayout_2 = new QVBoxLayout(groupBox_2);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        radioButton_OK = new QRadioButton(groupBox_Bool);
-        radioButton_OK->setObjectName(QStringLiteral("radioButton_OK"));
+        radioButton_marry = new QRadioButton(groupBox_2);
+        radioButton_marry->setObjectName(QStringLiteral("radioButton_marry"));
 
-        verticalLayout_2->addWidget(radioButton_OK);
+        verticalLayout_2->addWidget(radioButton_marry);
 
-        radioButton_Cls = new QRadioButton(groupBox_Bool);
-        radioButton_Cls->setObjectName(QStringLiteral("radioButton_Cls"));
+        radioButton_single = new QRadioButton(groupBox_2);
+        radioButton_single->setObjectName(QStringLiteral("radioButton_single"));
 
-        verticalLayout_2->addWidget(radioButton_Cls);
+        verticalLayout_2->addWidget(radioButton_single);
 
-        groupBox = new QGroupBox(Widget);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(30, 230, 93, 125));
-        verticalLayout_3 = new QVBoxLayout(groupBox);
+        groupBox_3 = new QGroupBox(Widget);
+        groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
+        groupBox_3->setGeometry(QRect(20, 210, 109, 178));
+        verticalLayout_3 = new QVBoxLayout(groupBox_3);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        checkBox_best = new QCheckBox(groupBox);
+        checkBox_best = new QCheckBox(groupBox_3);
         checkBox_best->setObjectName(QStringLiteral("checkBox_best"));
 
         verticalLayout_3->addWidget(checkBox_best);
 
-        checkBox_better = new QCheckBox(groupBox);
+        checkBox_better = new QCheckBox(groupBox_3);
         checkBox_better->setObjectName(QStringLiteral("checkBox_better"));
-        checkBox_better->setTristate(true);
 
         verticalLayout_3->addWidget(checkBox_better);
 
-        checkBox_good = new QCheckBox(groupBox);
-        checkBox_good->setObjectName(QStringLiteral("checkBox_good"));
+        checkBox_bad = new QCheckBox(groupBox_3);
+        checkBox_bad->setObjectName(QStringLiteral("checkBox_bad"));
 
-        verticalLayout_3->addWidget(checkBox_good);
+        verticalLayout_3->addWidget(checkBox_bad);
+
+        checkBox_verybad = new QCheckBox(groupBox_3);
+        checkBox_verybad->setObjectName(QStringLiteral("checkBox_verybad"));
+        checkBox_verybad->setTristate(true);
+
+        verticalLayout_3->addWidget(checkBox_verybad);
 
         listWidget = new QListWidget(Widget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(280, 30, 256, 192));
+        listWidget->setGeometry(QRect(210, 10, 256, 192));
+        treeWidget = new QTreeWidget(Widget);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+        __qtreewidgetitem->setText(0, QStringLiteral("1"));
+        treeWidget->setHeaderItem(__qtreewidgetitem);
+        treeWidget->setObjectName(QStringLiteral("treeWidget"));
+        treeWidget->setGeometry(QRect(220, 210, 501, 192));
 
         retranslateUi(Widget);
 
@@ -126,16 +140,17 @@ public:
     {
         Widget->setWindowTitle(QApplication::translate("Widget", "Widget", Q_NULLPTR));
         toolButton->setText(QApplication::translate("Widget", "...", Q_NULLPTR));
-        groupBox_sex->setTitle(QApplication::translate("Widget", "sex", Q_NULLPTR));
-        radioButton_mam->setText(QApplication::translate("Widget", "man", Q_NULLPTR));
-        radioButton_women->setText(QApplication::translate("Widget", "woman", Q_NULLPTR));
-        groupBox_Bool->setTitle(QApplication::translate("Widget", "Bool", Q_NULLPTR));
-        radioButton_OK->setText(QApplication::translate("Widget", "OK", Q_NULLPTR));
-        radioButton_Cls->setText(QApplication::translate("Widget", "Close", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("Widget", "estimate", Q_NULLPTR));
-        checkBox_best->setText(QApplication::translate("Widget", "best", Q_NULLPTR));
-        checkBox_better->setText(QApplication::translate("Widget", "better", Q_NULLPTR));
-        checkBox_good->setText(QApplication::translate("Widget", "good", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("Widget", "\346\200\247\345\210\253", Q_NULLPTR));
+        radioButton_man->setText(QApplication::translate("Widget", "\347\224\267", Q_NULLPTR));
+        radioButton_women->setText(QApplication::translate("Widget", "\345\245\263", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("Widget", "\345\251\232\345\220\246", Q_NULLPTR));
+        radioButton_marry->setText(QApplication::translate("Widget", "\345\267\262\345\251\232", Q_NULLPTR));
+        radioButton_single->setText(QApplication::translate("Widget", "\346\234\252\345\251\232", Q_NULLPTR));
+        groupBox_3->setTitle(QApplication::translate("Widget", "\346\273\241\346\204\217\350\260\203\346\237\245", Q_NULLPTR));
+        checkBox_best->setText(QApplication::translate("Widget", "\351\235\236\345\270\270\346\273\241\346\204\217", Q_NULLPTR));
+        checkBox_better->setText(QApplication::translate("Widget", "\346\273\241\346\204\217", Q_NULLPTR));
+        checkBox_bad->setText(QApplication::translate("Widget", "\345\267\256", Q_NULLPTR));
+        checkBox_verybad->setText(QApplication::translate("Widget", "\351\235\236\345\270\270\345\267\256", Q_NULLPTR));
     } // retranslateUi
 
 };
