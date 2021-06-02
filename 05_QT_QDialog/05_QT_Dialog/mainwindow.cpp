@@ -8,18 +8,24 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->actionnew, &QAction::triggered, this, [=](){
-        //modal dialog
-        QDialog dlg(this);
-        dlg.exec();
+    //modal mode
+    connect(ui->actionnew, &QAction::triggered, [=](){
+        QDialog log(this);
+
+        log.setWindowTitle("New");
+        log.resize(200, 100);
+        log.exec();
     });
 
-    connect(ui->actionopen, &QAction::triggered, this, [=](){
-        //modeless dialog
-        QDialog *dlg = new QDialog(this);
-        dlg->show();
-        dlg->setAttribute(Qt::WA_DeleteOnClose);
+    //modeless mode
+    connect(ui->actionopen, &QAction::triggered, [=](){
+        QDialog *log = new QDialog(this);
 
+        log->setWindowTitle("Open");
+        log->resize(200, 100);
+        log->show();
+
+        log->setAttribute(Qt::WA_DeleteOnClose);
     });
 }
 
