@@ -18,6 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -45,6 +46,7 @@ public:
     QCheckBox *checkBox_verybad;
     QListWidget *listWidget;
     QTreeWidget *treeWidget;
+    QTableWidget *tableWidget;
 
     void setupUi(QWidget *Widget)
     {
@@ -129,7 +131,10 @@ public:
         __qtreewidgetitem->setText(0, QStringLiteral("1"));
         treeWidget->setHeaderItem(__qtreewidgetitem);
         treeWidget->setObjectName(QStringLiteral("treeWidget"));
-        treeWidget->setGeometry(QRect(220, 210, 501, 192));
+        treeWidget->setGeometry(QRect(170, 330, 501, 192));
+        tableWidget = new QTableWidget(Widget);
+        tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        tableWidget->setGeometry(QRect(510, 30, 361, 251));
 
         retranslateUi(Widget);
 

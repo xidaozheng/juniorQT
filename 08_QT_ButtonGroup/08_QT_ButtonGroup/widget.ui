@@ -156,8 +156,8 @@
   <widget class="QTreeWidget" name="treeWidget">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>210</y>
+     <x>170</x>
+     <y>330</y>
      <width>501</width>
      <height>192</height>
     </rect>
@@ -167,6 +167,16 @@
      <string notr="true">1</string>
     </property>
    </column>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>30</y>
+     <width>361</width>
+     <height>251</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

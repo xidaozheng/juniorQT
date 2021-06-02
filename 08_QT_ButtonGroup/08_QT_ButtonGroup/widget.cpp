@@ -3,6 +3,8 @@
 #include <QDebug>
 #include <QListWidgetItem>
 #include <QTreeWidgetItem>
+#include <QTableWidget>
+
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -71,6 +73,24 @@ Widget::Widget(QWidget *parent) :
         zhiItem->addChild(l5);
         QTreeWidgetItem *l6 = new QTreeWidgetItem(hero6);
         zhiItem->addChild(l6);
+    }
+
+    {
+        ui->tableWidget->setColumnCount(3);
+        ui->tableWidget->setRowCount(5);
+        ui->tableWidget->setHorizontalHeaderLabels(QStringList() << "姓名" << "性别" << "年龄");
+
+        QStringList list[3];
+        list[0] << "亚瑟" << "妲己" << "安琪拉" << "赵云" << "孙悟空";
+        list[1] << "男" << "女" << "女" << "男" << "中立";
+        list[2] << "18" << "19" << "20" << "21" << "22";
+        for(int i=0; i<5; i++)
+        {
+            int col = 0;
+            ui->tableWidget->setItem(i, col++, new QTableWidgetItem(list[0][i]));
+            ui->tableWidget->setItem(i, col++, new QTableWidgetItem(list[1][i]));
+            ui->tableWidget->setItem(i, col++, new QTableWidgetItem(list[2][i]));
+        }
     }
 }
 
