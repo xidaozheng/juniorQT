@@ -1,6 +1,5 @@
 #include "widget.h"
 #include "ui_widget.h"
-#include "smallwidget.h"
 #include <QDebug>
 
 Widget::Widget(QWidget *parent) :
@@ -9,16 +8,14 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->btn_get, &QPushButton::clicked, [=](){
-        qDebug() << ui->widget->getNum();   //为什么用widget
+    connect(ui->pushButton_get, &QPushButton::clicked, [=](){
+       qDebug() << ui->widget->getValue();
     });
 
-    connect(ui->btn_set, &QPushButton::clicked, [=](){
-        ui->widget->setNum(50);
+    connect(ui->pushButton_set, &QPushButton::clicked, [=](){
+        ui->widget->setValue(50);
     });
 }
-
-
 
 Widget::~Widget()
 {

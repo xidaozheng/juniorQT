@@ -14,8 +14,9 @@ class SmallWidget : public QWidget
 public:
     explicit SmallWidget(QWidget *parent = 0);
     ~SmallWidget();
-    int getNum();
-    void setNum(int num);
+
+    void setValue(int val);
+    int  getValue();
 
 private:
     Ui::SmallWidget *ui;

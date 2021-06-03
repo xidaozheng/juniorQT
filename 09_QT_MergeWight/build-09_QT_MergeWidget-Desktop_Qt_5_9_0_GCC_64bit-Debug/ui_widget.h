@@ -24,23 +24,23 @@ class Ui_Widget
 {
 public:
     SmallWidget *widget;
-    QPushButton *btn_set;
-    QPushButton *btn_get;
+    QPushButton *pushButton_set;
+    QPushButton *pushButton_get;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QStringLiteral("Widget"));
-        Widget->resize(464, 204);
+        Widget->resize(400, 300);
         widget = new SmallWidget(Widget);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(90, 60, 301, 51));
-        btn_set = new QPushButton(Widget);
-        btn_set->setObjectName(QStringLiteral("btn_set"));
-        btn_set->setGeometry(QRect(60, 140, 89, 25));
-        btn_get = new QPushButton(Widget);
-        btn_get->setObjectName(QStringLiteral("btn_get"));
-        btn_get->setGeometry(QRect(220, 140, 89, 25));
+        widget->setGeometry(QRect(80, 90, 241, 61));
+        pushButton_set = new QPushButton(Widget);
+        pushButton_set->setObjectName(QStringLiteral("pushButton_set"));
+        pushButton_set->setGeometry(QRect(50, 200, 89, 25));
+        pushButton_get = new QPushButton(Widget);
+        pushButton_get->setObjectName(QStringLiteral("pushButton_get"));
+        pushButton_get->setGeometry(QRect(200, 200, 89, 25));
 
         retranslateUi(Widget);
 
@@ -50,8 +50,8 @@ public:
     void retranslateUi(QWidget *Widget)
     {
         Widget->setWindowTitle(QApplication::translate("Widget", "Widget", Q_NULLPTR));
-        btn_set->setText(QApplication::translate("Widget", "\350\260\203\345\210\260\344\270\200\345\215\212", Q_NULLPTR));
-        btn_get->setText(QApplication::translate("Widget", "\350\216\267\345\217\226\346\225\260\345\200\274", Q_NULLPTR));
+        pushButton_set->setText(QApplication::translate("Widget", "jump to half", Q_NULLPTR));
+        pushButton_get->setText(QApplication::translate("Widget", "get value", Q_NULLPTR));
     } // retranslateUi
 
 };

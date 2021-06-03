@@ -32,7 +32,7 @@ public:
     {
         if (SmallWidget->objectName().isEmpty())
             SmallWidget->setObjectName(QStringLiteral("SmallWidget"));
-        SmallWidget->resize(289, 56);
+        SmallWidget->resize(282, 61);
         horizontalLayout = new QHBoxLayout(SmallWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         spinBox = new QSpinBox(SmallWidget);

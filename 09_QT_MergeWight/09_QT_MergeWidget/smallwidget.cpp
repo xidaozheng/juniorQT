@@ -7,20 +7,20 @@ SmallWidget::SmallWidget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    void (QSpinBox:: *funcChanged)(int) = &QSpinBox::valueChanged;
-    connect(ui->spinBox, funcChanged, ui->horizontalSlider, &QSlider::setValue);
+    void (QSpinBox:: *Changed)(int) = &QSpinBox::valueChanged;
+    connect(ui->spinBox, Changed, ui->horizontalSlider, &QSlider::setValue);
 
     connect(ui->horizontalSlider, &QSlider::valueChanged, ui->spinBox, &QSpinBox::setValue);
 }
 
-int SmallWidget::getNum()
+void SmallWidget::setValue(int val)
 {
-    return ui->spinBox->value();
+    ui->horizontalSlider->setValue(val);
 }
 
-void SmallWidget::setNum(int num)
+int  SmallWidget::getValue()
 {
-    ui->spinBox->setValue(num);
+    return ui->horizontalSlider->value();
 }
 
 SmallWidget::~SmallWidget()

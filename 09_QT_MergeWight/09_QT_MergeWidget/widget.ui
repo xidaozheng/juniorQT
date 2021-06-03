@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>464</width>
-    <height>204</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,37 +16,37 @@
   <widget class="SmallWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>60</y>
-     <width>301</width>
-     <height>51</height>
+     <x>80</x>
+     <y>90</y>
+     <width>241</width>
+     <height>61</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_set">
+  <widget class="QPushButton" name="pushButton_set">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>140</y>
+     <x>50</x>
+     <y>200</y>
      <width>89</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>调到一半</string>
+    <string>jump to half</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_get">
+  <widget class="QPushButton" name="pushButton_get">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>140</y>
+     <x>200</x>
+     <y>200</y>
      <width>89</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>获取数值</string>
+    <string>get value</string>
    </property>
   </widget>
  </widget>
